@@ -172,6 +172,21 @@ public class PageScriptTests
         Assert.True(page.Is($"{LifeRow}.classList.contains('slfb-host')"));
     }
 
+    /// <summary>
+    /// Stats UI hides every element with the game's status-tooltip class while its own stat tooltips are on. The
+    /// strip's hover box is the strip's own, so it must not carry that class or it never shows.
+    /// </summary>
+    [Fact]
+    public void The_hover_box_is_not_hidden_with_the_game_s_stat_tooltips()
+    {
+        var page = PageScript.On();
+
+        page.Apply(Reading(72));
+
+        Assert.Equal(1, page.Number($"stripOn({LifeRow}).querySelectorAll('.slfb-tip').length"));
+        Assert.Equal(0, page.Number($"stripOn({LifeRow}).querySelectorAll('.status-tooltip').length"));
+    }
+
     [Fact]
     public void A_strip_left_on_a_row_that_is_no_longer_Life_goes()
     {

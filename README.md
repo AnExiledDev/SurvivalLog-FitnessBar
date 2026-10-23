@@ -45,7 +45,7 @@ Settings live in `BepInEx\config\com.dev.survivallog.fitnessbar.cfg`, created th
 
 Tested on Survival Log 1.1.19131 with BepInEx `6.0.0-be.788`.
 
-Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.0 started`. With `Enabled` set to `false` the line ends `off, FitnessBar/Enabled is false`.
+Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.1 started`. With `Enabled` set to `false` the line ends `off, FitnessBar/Enabled is false`.
 
 Once a game has loaded, look for `page script sent to CoreUI1 (install 1): the Fitness strip is under the Life bar`. A line ending `no Life bar on the HUD right now` means the mod could not find the Life bar to put the Fitness bar under.
 
@@ -59,6 +59,7 @@ To reach me directly, message `exiled.dev` on Discord; you can find me in the [o
 
 ## Changelog
 
+- **0.1.1**: The hover box now shows with Stats UI installed.
 - **0.1.0**: First version.
 
 ## Build

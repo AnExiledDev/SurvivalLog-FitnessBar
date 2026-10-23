@@ -47,8 +47,10 @@
         '.slfb-weak .slfb-fill{background-color:rgba(211,47,47,.7)}',
         '.slfb-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 5px;color:#fff;font-weight:bold;font-size:9px;line-height:10px;text-shadow:.7px .7px 1.4px #000,0 0 3.5px rgba(0,0,0,.8)}',
         '.slfb-weak .slfb-text{color:#FFEBEE;text-shadow:0 0 2px rgba(255,0,0,.8)}',
-        '.' + STRIP + ' > .slfb-tip{top:auto;bottom:0;transform:none}',
-        '.' + STRIP + ' > .slfb-tip::after{top:auto;bottom:1px;transform:none}',
+        // The hover box copies the game's .status-tooltip look under its own class: a mod that hides the game's stat
+        // tooltips to draw its own (Stats UI does) hides every .status-tooltip, and this one must stay.
+        '.slfb-tip{position:absolute;right:108%;bottom:0;width:240px;box-sizing:content-box;background-color:rgba(15,15,15,.65);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:10px 12px;box-shadow:0 4px 12px rgba(0,0,0,.5);color:#fff;opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s ease;pointer-events:none;z-index:200;text-align:left}',
+        '.slfb-tip::after{content:"";position:absolute;bottom:1px;right:-6px;border-width:6px 0 6px 6px;border-style:solid;border-color:transparent transparent transparent rgba(15,15,15,.65)}',
         '.' + STRIP + ':hover > .slfb-tip{opacity:1;visibility:visible}',
         '.slfb-state{margin-top:6px;padding-top:5px;border-top:1px solid rgba(255,255,255,.15)}',
         '.slfb-weak .slfb-state{color:#ff8a80}',
@@ -120,7 +122,7 @@
         var strip = element('div', STRIP);
         var mask = strip.appendChild(element('div', 'slfb-mask'));
         var text = element('div', 'slfb-text');
-        var tip = strip.appendChild(element('div', 'status-tooltip slfb-tip'));
+        var tip = strip.appendChild(element('div', 'slfb-tip'));
         var header = tip.appendChild(element('div', 'st-header'));
 
         // The page hands the game only the areas marked this way, so the pointer over the strip is not taken as a
