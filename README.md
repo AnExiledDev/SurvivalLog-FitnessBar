@@ -23,7 +23,7 @@ Fitness Bar only reads your Fitness and draws it. It never writes the game's sta
 
 ## Requirements
 
-- Survival Log 1.1.19131. Built and tested on this version; a game update can break it until the mod is updated.
+- Survival Log 1.1.19611. Built and tested on this version; a game update can break it until the mod is updated.
 - The [BepInEx Pack for Survival Log](https://www.nexusmods.com/survivallog/mods/12), the BepInEx 6 (IL2CPP) build for the game.
 
 ## Install
@@ -43,7 +43,7 @@ Settings live in `BepInEx\config\com.dev.survivallog.fitnessbar.cfg`, created th
 
 ## Troubleshooting
 
-Tested on Survival Log 1.1.19131 with BepInEx `6.0.0-be.788`.
+Tested on Survival Log 1.1.19611 with BepInEx `6.0.0-be.788`.
 
 Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.1 started`. With `Enabled` set to `false` the line ends `off, FitnessBar/Enabled is false`.
 

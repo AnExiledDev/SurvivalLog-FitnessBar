@@ -19,7 +19,7 @@ The value is read every couple of seconds, so a change can take that long to sho
 
 [size=5]Requirements[/size]
 [list]
-[*]Survival Log 1.1.19131. A game update can break it until the mod is updated.[/*]
+[*]Survival Log 1.1.19611. A game update can break it until the mod is updated.[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/12]BepInEx for Survival Log[/url]. Install it first.[/*]
 [/list]
 
@@ -65,7 +65,7 @@ Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会�
 
 [size=5]前置要求[/size]
 [list]
-[*]Survival Log 1.1.19131。游戏更新后模组可能暂时失效，直到模组更新为止。[/*]
+[*]Survival Log 1.1.19611。游戏更新后模组可能暂时失效，直到模组更新为止。[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/12]BepInEx for Survival Log[/url]，请先安装。[/*]
 [/list]
 

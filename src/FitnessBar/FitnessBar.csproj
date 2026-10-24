@@ -38,7 +38,7 @@
     <AssemblyMetadata Include="ModManager.Description" Value="Shows your Fitness, a stat the game hides, as a thin bar under the Life bar. It turns amber below 40 and red below 30, where you become Weakened, and hovering it explains what Fitness does.&#10;把游戏中隐藏的健康值显示为「生命」条下方的一条细条。低于40时变为琥珀色，低于30（会陷入「亚健康」）时变为红色，鼠标悬停可查看健康的作用。" />
     <AssemblyMetadata Include="ModManager.Author" Value="AnExiledDev" />
     <AssemblyMetadata Include="ModManager.Category" Value="Interface" />
-    <AssemblyMetadata Include="ModManager.GameVersion" Value="1.1.19131" />
+    <AssemblyMetadata Include="ModManager.GameVersion" Value="1.1.19611" />
     <AssemblyMetadata Include="ModManager.Settings" Value="Restart" />
     <AssemblyMetadata Include="ModManager.GitHub" Value="AnExiledDev/SurvivalLog-FitnessBar" />
     <AssemblyMetadata Include="ModManager.Changelog" Value="https://github.com/AnExiledDev/SurvivalLog-FitnessBar/blob/main/CHANGELOG.md" />
