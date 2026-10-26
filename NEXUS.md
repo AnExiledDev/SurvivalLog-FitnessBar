@@ -1,5 +1,5 @@
 Name: Fitness Bar
-Summary: Shows your hidden Fitness stat on the HUD as a thin bar under the Life bar, turning amber below 40 and red below 30, where you become Weakened. Hover it for a box that says what Fitness does, its exact value, how far you are from Weakened and what raises it. Reads only, in the game's own bar style, English or Chinese.
+Summary: Shows your hidden Fitness stat on the HUD as a thin bar under the Life bar, turning amber below 40 and red below 30, where you become Weakened. Hover it for a box that says what Fitness does, its exact value, how far you are from Weakened and what raises it. Uses the game's own bar style, in English or Chinese.
 
 Description (BBCode):
 Your character has a Fitness stat the HUD never shows. High Fitness lowers your chance of getting sick, and below 30 you become Weakened. Staying Hungry or Fatigued for too long wears it down. Fitness Bar puts it on screen, right under the Life bar, so you can see it drop before it hurts.
@@ -9,7 +9,7 @@ Your character has a Fitness stat the HUD never shows. High Fitness lowers your 
 [*][b]Fitness under the Life bar[/b]: a thin bar in the game's own bar style, with the value on it.[/*]
 [*][b]Warning colors[/b]: green, amber below 40, red below 30, where Weakened starts.[/*]
 [*][b]Hover box[/b]: shows Fitness as value and maximum, what Fitness does, how far you are from Weakened, and what raises it.[/*]
-[*][b]Clicks work as before[/b]: the bar takes the pointer only over itself.[/*]
+[*][b]Clicks work as before[/b]: the bar only catches the mouse when you point right at it.[/*]
 [*][b]English or Chinese[/b]: follows the game's language.[/*]
 [/list]
 Fitness Bar only reads your Fitness and draws it. It never changes the game's data, adds nothing to your save and does not edit game files. You can remove it at any time.
