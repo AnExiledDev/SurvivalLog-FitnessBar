@@ -17,6 +17,9 @@ Fitness Bar only reads your Fitness and draws it. It never changes the game's da
 [size=5]Known issues[/size]
 The value is read every couple of seconds, so a change can take that long to show.
 
+[center][img]https://sldb.core-directive.com/img/mods-banner.jpg[/img]
+[size=4][url=https://www.nexusmods.com/survivallog/mods/73]Get Mod Manager[/url] to set up all your mods in game  |  [url=https://sldb.core-directive.com/en/]Open the Survival Log wiki[/url] for items, recipes and maps[/size][/center]
+
 [size=5]Requirements[/size]
 [list]
 [*]Survival Log 1.1.19611. A game update can break it until the mod is updated.[/*]
@@ -40,7 +43,6 @@ One setting, [font=Courier New]Enabled[/font], in [font=Courier New]BepInEx\conf
 [size=5]Feedback[/size]
 Found a bug or have an idea? Come say hi on the [url=https://discord.gg/trTsyxUFqg]Core Directive Discord[/url], or post in this page's Posts tab. For bugs, please include [font=Courier New]BepInEx\LogOutput.log[/font] and [font=Courier New]BepInEx\fitness-bar.log[/font].
 To reach me directly, message [b]exiled.dev[/b] on Discord; you can find me in the [url=https://discord.gg/MZGg4gQAUe]official Survival Log Discord[/url]. I'm also on X as [url=https://x.com/AnExiledDev]@AnExiledDev[/url].
-Check out my [url=https://sldb.core-directive.com/en/]Survival Log wiki[/url] for items, crafting, maps and more.
 
 [size=5]Source and license[/size]
 Open source under MIT: [url=https://github.com/AnExiledDev/SurvivalLog-FitnessBar]github.com/AnExiledDev/SurvivalLog-FitnessBar[/url]
@@ -62,6 +64,8 @@ Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会�
 
 [size=5]已知问题[/size]
 数值每隔几秒读取一次，所以变化可能要等这么久才会显示。
+
+[url=https://www.nexusmods.com/survivallog/mods/73]获取 Mod Manager[/url]，在游戏里设置所有模组。[url=https://sldb.core-directive.com/zh/]打开 Survival Log 维基[/url]，物品、配方、地图一查就有。
 
 [size=5]前置要求[/size]
 [list]
@@ -86,7 +90,6 @@ Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会�
 [size=5]反馈[/size]
 发现 bug 或有好点子？欢迎来 [url=https://discord.gg/trTsyxUFqg]Core Directive Discord[/url] 打个招呼，或在本页的「Posts」标签里发帖。报告 bug 时，请附上 [font=Courier New]BepInEx\LogOutput.log[/font] 和 [font=Courier New]BepInEx\fitness-bar.log[/font]。
 想直接联系我，可以在 Discord 上给 [b]exiled.dev[/b] 发消息，我在 [url=https://discord.gg/MZGg4gQAUe]Survival Log 官方 Discord[/url] 里。也可以在 X 上找我：[url=https://x.com/AnExiledDev]@AnExiledDev[/url]。
-也欢迎看看我做的 [url=https://sldb.core-directive.com/zh/]Survival Log 维基[/url]，收录物品、制作、地图等资料。
 
 [size=5]源代码与许可[/size]
 基于 MIT 许可开源：[url=https://github.com/AnExiledDev/SurvivalLog-FitnessBar]github.com/AnExiledDev/SurvivalLog-FitnessBar[/url]
