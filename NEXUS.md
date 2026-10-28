@@ -2,6 +2,8 @@ Name: Fitness Bar
 Summary: Shows your hidden Fitness stat on the HUD as a thin bar under the Life bar, turning amber below 40 and red below 30, where you become Weakened. Hover it for a box that says what Fitness does, its exact value, how far you are from Weakened and what raises it. Uses the game's own bar style, in English or Chinese.
 
 Description (BBCode):
+[center][img]https://sldb.core-directive.com/media/save/1-save-safe.png[/img][/center]
+
 Your character has a Fitness stat the HUD never shows. High Fitness lowers your chance of getting sick, and below 30 you become Weakened. Staying Hungry or Fatigued for too long wears it down. Fitness Bar puts it on screen, right under the Life bar, so you can see it drop before it hurts.
 
 [size=5]Main features[/size]
