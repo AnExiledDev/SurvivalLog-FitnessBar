@@ -18,13 +18,14 @@ Fitness Bar only reads your Fitness and draws it. It never changes the game's da
 
 [size=5]Known issues[/size]
 The value is read every couple of seconds, so a change can take that long to show.
+With Vital Signs installed, Fitness Bar stays off: Vital Signs draws its own Fitness bar in the same spot.
 
 [center][img]https://sldb.core-directive.com/img/mods-banner.jpg[/img]
 [size=4][url=https://www.nexusmods.com/survivallog/mods/73]Get Mod Manager[/url] to set up all your mods in game  |  [url=https://sldb.core-directive.com/en/]Open the Survival Log wiki[/url] for items, recipes and maps[/size][/center]
 
 [size=5]Requirements[/size]
 [list]
-[*]Survival Log 1.1.19611. A game update can break it until the mod is updated.[/*]
+[*]Survival Log 1.1.20151. A game update can break it until the mod is updated.[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/12]BepInEx for Survival Log[/url]. Install it first.[/*]
 [/list]
 
@@ -66,12 +67,13 @@ Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会�
 
 [size=5]已知问题[/size]
 数值每隔几秒读取一次，所以变化可能要等这么久才会显示。
+安装了 Vital Signs 时，Fitness Bar 保持关闭：Vital Signs 会在同一位置显示它自己的健康条。
 
 [url=https://www.nexusmods.com/survivallog/mods/73]获取 Mod Manager[/url]，在游戏里设置所有模组。[url=https://sldb.core-directive.com/zh/]打开 Survival Log 维基[/url]，物品、配方、地图一查就有。
 
 [size=5]前置要求[/size]
 [list]
-[*]Survival Log 1.1.19611。游戏更新后模组可能暂时失效，直到模组更新为止。[/*]
+[*]Survival Log 1.1.20151。游戏更新后模组可能暂时失效，直到模组更新为止。[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/12]BepInEx for Survival Log[/url]，请先安装。[/*]
 [/list]
 

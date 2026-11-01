@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- With Vital Signs installed, Fitness Bar now stays off, so only one Fitness bar shows.
+- Made for Survival Log 1.1.20151.
+
 ## 0.1.1
 
 - Fixed: the Fitness hover box didn't show with Stats UI installed.
