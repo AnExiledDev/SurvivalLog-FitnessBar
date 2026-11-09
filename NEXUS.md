@@ -1,5 +1,5 @@
 Name: Fitness Bar
-Summary: Shows your hidden Fitness stat on the HUD as a thin bar under the Life bar, turning amber below 40 and red below 30, where you become Weakened. Hover it for a box that says what Fitness does, its exact value, how far you are from Weakened and what raises it. Uses the game's own bar style, in English or Chinese.
+Summary: Shows your hidden Fitness stat on the HUD as a thin bar under the Life bar, turning amber below 40 and red below 30, where you become Weakened. Hover it for a box that says what Fitness does, its exact value, how far you are from Weakened and what raises it. Uses the game's bar style, in English or Chinese.
 
 Description (BBCode):
 [center][img]https://sldb.core-directive.com/media/save/1-save-safe.png[/img][/center]
@@ -8,7 +8,7 @@ Your character has a Fitness stat the HUD never shows. High Fitness lowers your 
 
 [size=5]Main features[/size]
 [list]
-[*][b]Fitness under the Life bar[/b]: a thin bar in the game's own bar style, with the value on it.[/*]
+[*][b]Fitness under the Life bar[/b]: a thin bar in the game's bar style, with the value on it.[/*]
 [*][b]Warning colors[/b]: green, amber below 40, red below 30, where Weakened starts.[/*]
 [*][b]Hover box[/b]: shows Fitness as value and maximum, what Fitness does, how far you are from Weakened, and what raises it.[/*]
 [*][b]Clicks work as before[/b]: the bar only catches the mouse when you point right at it.[/*]

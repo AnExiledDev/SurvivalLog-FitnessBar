@@ -4,7 +4,7 @@
 (function () {
     if (window.__slfitness) return;
 
-    // The game's own line (AttributeStandard_TIPSDes_4): below 30 the player is Weakened.
+    // The game's line (AttributeStandard_TIPSDes_4): below 30 the player is Weakened.
     var WEAKENED_BELOW = 30;
     // A warning before that line.
     var LOW_BELOW = 40;
@@ -35,7 +35,7 @@
         }
     };
 
-    // The look of the game's own bars (.bar-mask, .progress-text, .status-tooltip), at a strip's height. The Life row
+    // The look of the game's bars (.bar-mask, .progress-text, .status-tooltip), at a strip's height. The Life row
     // gets room below it, so the strip covers nothing; the hover box opens upward from the strip's bottom edge, as the
     // game's last-row boxes do, so it stays on screen.
     var CSS = [

@@ -6,10 +6,10 @@ In Survival Log your character has a Fitness stat that the HUD never shows. High
 
 ## Features
 
-- **Fitness under the Life bar**: a thin bar in the game's own bar style, with the value on it.
+- **Fitness under the Life bar**: a thin bar in the game's bar style, with the value on it.
 - **Warning colors**: green, amber below 40, red below 30, where Weakened starts.
-- **Hover box**: in the game's own tooltip style. It shows Fitness as value and maximum, what Fitness does, how far you are from Weakened, and what raises it.
-- **Clicks work as before**: the bar takes the pointer only over itself, like the game's own bars.
+- **Hover box**: in the game's tooltip style. It shows Fitness as value and maximum, what Fitness does, how far you are from Weakened, and what raises it.
+- **Clicks work as before**: the bar takes the pointer only over itself, like the game's bars.
 - **Any language**: the bar and hover box are in English, or in Simplified Chinese when the game is set to Chinese.
 - **Survives reloads**: the HUD can reload after a scene change; the mod notices within a couple of seconds and draws the bar again.
 - **Log file**: the mod writes what it did at startup and what the HUD answered to `BepInEx\fitness-bar.log`.
@@ -19,7 +19,7 @@ Fitness Bar only reads your Fitness and draws it. It never writes the game's sta
 ## Known issues and limits
 
 - The value is read every couple of seconds, so a change can take that long to show.
-- The Weakened line at 30 is the one the game's own tip text gives.
+- The Weakened line at 30 is the one the game's tip text gives.
 - With [Vital Signs](https://github.com/AnExiledDev/SurvivalLog-VitalSigns) installed, Fitness Bar stays off: Vital Signs draws its own Fitness bar in the same spot, and one bar is enough.
 
 ## Requirements
