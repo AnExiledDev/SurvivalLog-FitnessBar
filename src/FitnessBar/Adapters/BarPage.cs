@@ -1,5 +1,7 @@
 using System;
 using System.IO;
+using ExiledToolkit.Game;
+using ExiledToolkit.Kit;
 using FitnessBar.Core;
 using GameCore.HotUpdate.ReduxUI;
 

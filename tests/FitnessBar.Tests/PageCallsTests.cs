@@ -1,4 +1,4 @@
-using System.Text.Json;
+using ExiledToolkit.Web;
 using FitnessBar.Core;
 using Xunit;
 
@@ -6,30 +6,12 @@ namespace FitnessBar.Tests;
 
 public class PageCallsTests
 {
-    /// <summary>A JSON string literal is a JavaScript one, so a text that survives a JSON read survives the page.</summary>
-    [Theory]
-    [InlineData("var a = 1;")]
-    [InlineData("el.setAttribute(\"data-interactive\", '');")]
-    [InlineData("var re = /CoreUI1\\.html/i;")]
-    [InlineData("two\nlines\r\tand a tab")]
-    [InlineData("ends with a backslash\\")]
-    [InlineData("line\u2028separator\u2029")]
-    public void The_page_script_reaches_the_page_exactly_as_written(string script)
-    {
-        var literal = PageCalls.Quote(script);
-
-        Assert.Equal(script, JsonSerializer.Deserialize<string>(literal));
-        Assert.DoesNotContain('\n', literal);
-        Assert.DoesNotContain('\u2028', literal);
-        Assert.DoesNotContain('\u2029', literal);
-    }
-
     [Fact]
     public void The_install_call_carries_the_whole_script()
     {
         const string script = "(function(){window.__slfitness={apply:function(){return \"ok\";}};})();\n// last line";
 
-        Assert.Contains(PageCalls.Quote(script), PageCalls.Install(script, new Fitness(72, 100), false));
+        Assert.Contains(JsText.Literal(script), PageCalls.Install(script, new Fitness(72, 100), false));
     }
 
     [Fact]

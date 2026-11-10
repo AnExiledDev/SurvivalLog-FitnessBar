@@ -1,5 +1,5 @@
 using System.Globalization;
-using System.Text;
+using ExiledToolkit.Web;
 
 namespace FitnessBar.Core;
 
@@ -25,7 +25,7 @@ public static class PageCalls
 
     /// <summary>Evaluates the script inside the CoreUI1 frame, so it sees that page's Vue app, styles and click-through.</summary>
     public static string Install(string script, Fitness? fitness, bool isChinese) =>
-        Wrap($"w.eval({Quote(script)});if(!{Api})return '{PageAnswer.InstallLeftNothing}';{Apply(fitness, isChinese)}");
+        Wrap($"w.eval({JsText.Literal(script)});if(!{Api})return '{PageAnswer.InstallLeftNothing}';{Apply(fitness, isChinese)}");
 
     /// <summary>The reading as the page script takes it. With no player, or nothing drawable, the value is -1.</summary>
     public static string Reading(Fitness? fitness, bool isChinese)
@@ -33,33 +33,6 @@ public static class PageCalls
         var shown = fitness is { IsDrawable: true } drawable ? drawable : new Fitness(-1, 0);
 
         return $"{{value:{Number(shown.Value)},max:{Number(shown.Max)},zh:{(isChinese ? "true" : "false")}}}";
-    }
-
-    /// <summary>A JavaScript string literal that no quote, backslash or line break in the text can end early.</summary>
-    public static string Quote(string text)
-    {
-        var literal = new StringBuilder(text.Length + 2).Append('"');
-
-        foreach (var c in text)
-        {
-            switch (c)
-            {
-                case '"':
-                    literal.Append("\\\"");
-                    break;
-                case '\\':
-                    literal.Append("\\\\");
-                    break;
-                case < ' ' or '\u2028' or '\u2029':
-                    literal.Append("\\u").Append(((int)c).ToString("x4", CultureInfo.InvariantCulture));
-                    break;
-                default:
-                    literal.Append(c);
-                    break;
-            }
-        }
-
-        return literal.Append('"').ToString();
     }
 
     private static string Apply(Fitness? fitness, bool isChinese) => $"return String({Api}.apply({Reading(fitness, isChinese)}));";
