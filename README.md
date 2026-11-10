@@ -26,7 +26,7 @@ Fitness Bar only reads your Fitness and draws it. It never writes the game's sta
 
 - Survival Log 1.1.20719. Built for this version; a game update can break it until the mod is updated.
 - The [BepInEx Pack for Survival Log](https://www.nexusmods.com/survivallog/mods/12), the BepInEx 6 (IL2CPP) build for the game.
-- [Exiled's Toolkit](https://github.com/AnExiledDev/SurvivalLog-ExiledToolkit) 0.19.0 or newer. Fitness Bar does not load without it.
+- [Exiled's Toolkit](https://github.com/AnExiledDev/SurvivalLog-ExiledToolkit) 0.20.0 or newer. Fitness Bar does not load without it.
 - Optional: [Mod Manager](https://www.nexusmods.com/survivallog/mods/73). With it, you can change every setting in game on its Mods screen and see what each one does, without opening the config file.
 
 ## Install
@@ -49,7 +49,7 @@ Settings live in `BepInEx\config\com.dev.survivallog.fitnessbar.cfg`, created th
 
 Built for Survival Log 1.1.20719 with BepInEx `6.0.0-be.788`.
 
-Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.3 started`. With `Enabled` set to `false` the line ends `off, FitnessBar/Enabled is false`. With Vital Signs installed it ends `off, Vital Signs is installed and draws the Fitness bar`.
+Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.4 started`. With `Enabled` set to `false` the line ends `off, FitnessBar/Enabled is false`. With Vital Signs installed it ends `off, Vital Signs is installed and draws the Fitness bar`.
 
 Once a game has loaded, look for `page script sent to CoreUI1 (install 1): the Fitness strip is under the Life bar`. A line ending `no Life bar on the HUD right now` means the mod could not find the Life bar to put the Fitness bar under.
 
@@ -74,7 +74,7 @@ This is a BepInEx 6 IL2CPP plugin. It compiles against BepInEx, the game's IL2CP
 dotnet build src/FitnessBar -c Release -p:GameDir="C:\path\to\Survival Log" -p:ToolkitDll="C:\path\to\ExiledToolkit.dll"
 ```
 
-`GameDir` is the game folder and `ToolkitDll` is a built `ExiledToolkit.dll` (0.19.0 or newer). The defaults in the project file are local paths you will almost certainly need to override. The output DLL is at `src\FitnessBar\bin\Release\FitnessBar.dll`.
+`GameDir` is the game folder and `ToolkitDll` is a built `ExiledToolkit.dll` (0.20.0 or newer). The defaults in the project file are local paths you will almost certainly need to override. The output DLL is at `src\FitnessBar\bin\Release\FitnessBar.dll`.
 
 The unit tests cover the pure logic, including the page script, which they run against a small stand-in for the HUD page. They need nothing from the game, but they compile one file from the Exiled's Toolkit source, which they find from `ToolkitDll` (its DLL sits under `bin\Release` in that source):
 

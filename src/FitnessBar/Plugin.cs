@@ -9,12 +9,12 @@ namespace FitnessBar;
 
 // Soft, so Vital Signs loads first and is in the plugin list when Load() asks for it.
 [BepInDependency(VitalSignsGuid, BepInDependency.DependencyFlags.SoftDependency)]
-[BepInDependency(ExiledToolkit.Plugin.Guid, ">=0.19.0")]
+[BepInDependency(ExiledToolkit.Plugin.Guid, ">=0.20.0")]
 [BepInPlugin(Guid, "Fitness Bar", Version)]
 public sealed class Plugin : BasePlugin
 {
     private const string Guid = "com.dev.survivallog.fitnessbar";
-    private const string Version = "0.1.3";
+    private const string Version = "0.1.4";
     private const string VitalSignsGuid = "com.dev.survivallog.vitalsigns";
 
     public override void Load()
