@@ -87,10 +87,10 @@ public class PageScriptTests
     }
 
     [Theory]
-    [InlineData(72, "42 above 30, where Weakened starts.")]
-    [InlineData(40, "10 above 30, where Weakened starts.")]
-    [InlineData(35, "Close to Weakened: 6 more lost and it drops below 30.")]
-    [InlineData(30, "Close to Weakened: 1 more lost and it drops below 30.")]
+    [InlineData(72, "42 points above 30, where Weakened starts.")]
+    [InlineData(40, "10 points above 30, where Weakened starts.")]
+    [InlineData(35, "Close to Weakened: lose 6 more and you drop below 30.")]
+    [InlineData(30, "Close to Weakened: lose 1 more and you drop below 30.")]
     [InlineData(29, "Below 30, so you are Weakened.")]
     public void The_hover_box_says_what_the_value_means(int value, string line)
     {

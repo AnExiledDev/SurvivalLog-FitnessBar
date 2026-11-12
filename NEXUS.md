@@ -1,5 +1,5 @@
 Name: Fitness Bar
-Summary: Shows your hidden Fitness stat on the HUD as a thin bar under the Life bar, turning amber below 40 and red below 30, where you become Weakened. Hover it for a box that says what Fitness does, its exact value, how far you are from Weakened and what raises it. Uses the game's bar style, in English or Chinese. Needs Exiled's Toolkit.
+Summary: Shows your hidden Fitness stat on the HUD as a thin bar under the Life bar, turning amber below 40 and red below 30, where you become Weakened. Hover it for a box that says what Fitness does, its exact value, how far you are from Weakened and what raises it. Looks like the game's other bars, in English or Chinese. Needs Exiled's Toolkit.
 
 Description (BBCode):
 [center][img]https://sldb.core-directive.com/media/save/1-save-safe.png[/img][/center]
@@ -8,9 +8,9 @@ Your character has a Fitness stat the HUD never shows. High Fitness lowers your 
 
 [size=5]Main features[/size]
 [list]
-[*][b]Fitness under the Life bar[/b]: a thin bar in the game's bar style, with the value on it.[/*]
-[*][b]Warning colors[/b]: green, amber below 40, red below 30, where Weakened starts.[/*]
-[*][b]Hover box[/b]: shows Fitness as value and maximum, what Fitness does, how far you are from Weakened, and what raises it.[/*]
+[*][b]Fitness under the Life bar[/b]: a thin bar that looks like the game's other bars, with the value on it.[/*]
+[*][b]Warning colors[/b]: the bar is green, turns amber below 40 and turns red below 30, where Weakened starts.[/*]
+[*][b]Hover box[/b]: shows your Fitness and its maximum, what Fitness does, how far you are from Weakened, and what raises it.[/*]
 [*][b]Clicks work as before[/b]: the bar only catches the mouse when you point right at it.[/*]
 [*][b]English or Chinese[/b]: follows the game's language.[/*]
 [/list]
@@ -44,11 +44,11 @@ With Vital Signs installed, Fitness Bar stays off: Vital Signs draws its own Fit
 Delete [font=Courier New]FitnessBar.dll[/font] from the [font=Courier New]BepInEx\plugins[/font] folder.
 
 [size=5]Configuration[/size]
-One setting, [font=Courier New]Enabled[/font], in [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font] or on the Mod Manager's Mods screen. It takes effect at the next game start.
+There's one setting, [font=Courier New]Enabled[/font], which turns the mod on or off. Change it in [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font] or on the Mod Manager's Mods screen. It takes effect at the next game start.
 
 [size=5]Feedback[/size]
 Found a bug or have an idea? Come say hi on the [url=https://discord.gg/trTsyxUFqg]Core Directive Discord[/url], or post in this page's Posts tab. For bugs, please include [font=Courier New]BepInEx\LogOutput.log[/font] and [font=Courier New]BepInEx\fitness-bar.log[/font].
-To reach me directly, message [b]exiled.dev[/b] on Discord; you can find me in the [url=https://discord.gg/MZGg4gQAUe]official Survival Log Discord[/url]. I'm also on X as [url=https://x.com/AnExiledDev]@AnExiledDev[/url].
+To reach me directly, message [b]exiled.dev[/b] on Discord. You can find me in the [url=https://discord.gg/MZGg4gQAUe]official Survival Log Discord[/url]. I'm also on X as [url=https://x.com/AnExiledDev]@AnExiledDev[/url].
 
 [size=5]Source and license[/size]
 Open source under MIT: [url=https://github.com/AnExiledDev/SurvivalLog-FitnessBar]github.com/AnExiledDev/SurvivalLog-FitnessBar[/url]
@@ -60,10 +60,10 @@ Open source under MIT: [url=https://github.com/AnExiledDev/SurvivalLog-FitnessBa
 
 [size=5]主要功能[/size]
 [list]
-[*][b]生命条下的健康条[/b]：采用游戏自带样式的细条，上面显示数值。[/*]
+[*][b]生命条下的健康条[/b]：和游戏里其他状态条一样的细条，上面显示数值。[/*]
 [*][b]警示颜色[/b]：正常为绿色，低于40变成琥珀色，低于30（「亚健康」）变成红色。[/*]
 [*][b]悬停提示[/b]：显示健康的当前值和上限、健康的作用、离「亚健康」还有多远，以及如何提高它。[/*]
-[*][b]点击照常[/b]：只有鼠标在健康条上时才会被它接收。[/*]
+[*][b]点击照常[/b]：只有鼠标正好指着健康条时它才会响应，其他地方的点击和原来一样。[/*]
 [*][b]中英文[/b]：跟随游戏语言。[/*]
 [/list]
 Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会往存档里写入任何内容，也不会修改游戏文件。你可以随时移除它。
@@ -95,7 +95,7 @@ Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会�
 从 [font=Courier New]BepInEx\plugins[/font] 文件夹中删除 [font=Courier New]FitnessBar.dll[/font]。
 
 [size=5]配置[/size]
-只有一项设置 [font=Courier New]Enabled[/font]，位于 [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font]，也可以在 Mod Manager 的「模组」界面修改，在下次启动游戏时生效。
+只有一项设置 [font=Courier New]Enabled[/font]，用来开关本模组。可以在 [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font] 里修改，也可以在 Mod Manager 的「模组」界面修改，下次启动游戏时生效。
 
 [size=5]反馈[/size]
 发现 bug 或有好点子？欢迎来 [url=https://discord.gg/trTsyxUFqg]Core Directive Discord[/url] 打个招呼，或在本页的「Posts」标签里发帖。报告 bug 时，请附上 [font=Courier New]BepInEx\LogOutput.log[/font] 和 [font=Courier New]BepInEx\fitness-bar.log[/font]。

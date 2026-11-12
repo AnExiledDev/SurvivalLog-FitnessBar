@@ -21,8 +21,8 @@
             name: 'Fitness',
             about: 'High Fitness lowers your chance of getting sick. Below 30 you become Weakened. Staying Hungry or Fatigued for too long lowers it.',
             weakened: 'Below 30, so you are Weakened.',
-            low: function (left) { return 'Close to Weakened: ' + left + ' more lost and it drops below 30.'; },
-            fine: function (above) { return above + ' above 30, where Weakened starts.'; },
+            low: function (left) { return 'Close to Weakened: lose ' + left + ' more and you drop below 30.'; },
+            fine: function (above) { return above + ' points above 30, where Weakened starts.'; },
             raise: 'Food that gives Fitness raises it.'
         },
         zh: {

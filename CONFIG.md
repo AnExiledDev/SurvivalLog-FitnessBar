@@ -6,4 +6,4 @@ Settings live in `BepInEx\config\com.dev.survivallog.fitnessbar.cfg`, created th
 
 | Setting | Default | What it does |
 | --- | --- | --- |
-| `Enabled` | `true` | Shows the Fitness bar under the Life bar. `false` turns the mod off and the HUD stays as the game draws it. With Vital Signs installed the mod stays off either way, since Vital Signs draws the same bar. Takes effect at the next game start. |
+| `Enabled` | `true` | Shows the Fitness bar under the Life bar. `false` turns the mod off and leaves the HUD unchanged. With Vital Signs installed the mod stays off either way, because Vital Signs draws the same bar. Takes effect at the next game start. |
