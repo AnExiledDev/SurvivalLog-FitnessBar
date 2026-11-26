@@ -18,8 +18,22 @@ internal sealed class BarPage
 
     private readonly PageWatch _watch = new();
     private readonly ReplySlot _replies = new();
+    private readonly ReplySlot _hideReplies = new();
     private readonly Action<string> _log;
     private string? _script;
+    private bool _isOn = true;
+    private bool _isHideDue;
+
+    /// <summary>Set from the settings. Turning it off takes the strip off the page at the next frame.</summary>
+    public bool IsOn
+    {
+        set
+        {
+            if (_isOn && !value) _isHideDue = true;
+
+            _isOn = value;
+        }
+    }
 
     public BarPage(Action<string> log)
     {
@@ -28,6 +42,13 @@ internal sealed class BarPage
 
     public void Tick(double now)
     {
+        if (!_isOn)
+        {
+            if (_isHideDue) Hide();
+
+            return;
+        }
+
         var turn = _watch.Step(now, _replies.Take());
 
         if (turn.LogLine != null) _log(turn.LogLine);
@@ -39,6 +60,18 @@ internal sealed class BarPage
         var javaScript = turn.Send == PageSend.Install ? PageCalls.Install(Script(), fitness, isChinese) : PageCalls.Check(fitness, isChinese);
 
         if (Run(javaScript, now) is { } line) _log(line);
+    }
+
+    /// <summary>
+    /// A reading with no value takes the strip away (fitnessbar.js apply). The answer is not waited for: with no page or
+    /// no script there is no strip to take away, and a reloaded page starts without one.
+    /// </summary>
+    private void Hide()
+    {
+        _isHideDue = false;
+
+        if (!WebUi.TryRun(PageCalls.Check(null, GameLanguage.IsChinese()), _hideReplies, out var failure) && failure != null)
+            _log("taking the Fitness strip off the page failed: " + failure.Message);
     }
 
     /// <summary>Sends the call; returns a line for the log when it could not leave.</summary>

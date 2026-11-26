@@ -20,11 +20,11 @@ Fitness Bar only reads your Fitness and draws it. It never changes anything in t
 
 - The value is read every couple of seconds, so a change can take that long to show.
 - Weakened at 30 is the number from the game's tip text. The mod doesn't read it from the game, so if an update moves it, the colors will be off until the mod is updated.
-- With [Vital Signs](https://github.com/AnExiledDev/SurvivalLog-VitalSigns) installed, Fitness Bar stays off: Vital Signs draws its own Fitness bar in the same spot, and one bar is enough.
+- While [Vital Signs](https://github.com/AnExiledDev/SurvivalLog-VitalSigns) shows its Fitness bar in the same spot, Fitness Bar stays off, since one bar is enough. Turn that bar off in Vital Signs (`Display` `FitnessBar`) and this one shows instead.
 
 ## Requirements
 
-- Survival Log 1.1.20719. Built for this version. A game update can break it until the mod is updated.
+- Survival Log 1.1.21671. Built for this version. A game update can break it until the mod is updated.
 - The [BepInEx Pack for Survival Log](https://www.nexusmods.com/survivallog/mods/12), the BepInEx 6 (IL2CPP) build for the game.
 - [Exiled's Toolkit](https://github.com/AnExiledDev/SurvivalLog-ExiledToolkit) 0.20.0 or newer. Fitness Bar does not load without it.
 - Optional: [Mod Manager](https://www.nexusmods.com/survivallog/mods/73). With it, you can change every setting in game on its Mods screen and see what each one does, without opening the config file.
@@ -43,13 +43,13 @@ Delete `FitnessBar.dll` from the `BepInEx\plugins` folder. For a clean slate, al
 
 ## Configuration
 
-Settings live in `BepInEx\config\com.dev.survivallog.fitnessbar.cfg`, created the first time the game starts with the mod. Change them in game on the Mod Manager's Mods screen, or edit the file while the game is closed. Changes take effect at the next game start. Each setting in the cfg file is explained in English and Simplified Chinese. See [CONFIG.md](CONFIG.md) for every setting.
+Settings live in `BepInEx\config\com.dev.survivallog.fitnessbar.cfg`, created the first time the game starts with the mod. Change them in game on the Mod Manager's Mods screen, or edit the file while the game is closed. Changes on the Mods screen take effect at once. Each setting in the cfg file is explained in English and Simplified Chinese. See [CONFIG.md](CONFIG.md) for every setting.
 
 ## Troubleshooting
 
-Built for Survival Log 1.1.20719 with BepInEx `6.0.0-be.788`.
+Built for Survival Log 1.1.21671 with BepInEx `6.0.0-be.788`.
 
-Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.5 started`. With `Enabled` set to `false` the line ends `off, FitnessBar/Enabled is false`. With Vital Signs installed it ends `off, Vital Signs is installed and draws the Fitness bar`.
+Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.6 started` and the line after it. With `Enabled` set to `false` it says `off: FitnessBar/Enabled is false`. While Vital Signs shows its Fitness bar it says `off: Vital Signs draws the Fitness bar`. Otherwise it says `drawing the Fitness bar`.
 
 Once a game has loaded, look for `page script sent to CoreUI1 (install 1): the Fitness strip is under the Life bar`. A line ending `no Life bar on the HUD right now` means the mod could not find the Life bar to put the Fitness bar under.
 

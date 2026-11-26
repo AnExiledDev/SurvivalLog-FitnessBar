@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.6
+
+- With Vital Signs installed, this bar now shows when you turn off Vital Signs' Fitness bar or Vital Signs itself. Before, Fitness Bar stayed off as soon as Vital Signs was installed, so you could end up with no Fitness bar at all.
+- `Enabled` now takes effect as soon as you change it, with no restart.
+- Made for Survival Log 1.1.21671.
+
 ## 0.1.5
 
 - Clearer wording in the hover box and the settings.

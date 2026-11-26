@@ -18,14 +18,14 @@ Fitness Bar only reads your Fitness and draws it. It never changes the game's da
 
 [size=5]Known issues[/size]
 The value is read every couple of seconds, so a change can take that long to show.
-With Vital Signs installed, Fitness Bar stays off: Vital Signs draws its own Fitness bar in the same spot.
+While Vital Signs shows its Fitness bar in the same spot, Fitness Bar stays off. Turn that bar off in Vital Signs and this one shows instead.
 
 [center][img]https://sldb.core-directive.com/img/mods-banner.jpg[/img]
 [size=4][url=https://www.nexusmods.com/survivallog/mods/73]Get Mod Manager[/url] to set up all your mods in game  |  [url=https://sldb.core-directive.com/en/]Open the Survival Log wiki[/url] for items, recipes and maps[/size][/center]
 
 [size=5]Requirements[/size]
 [list]
-[*]Survival Log 1.1.20719. A game update can break it until the mod is updated.[/*]
+[*]Survival Log 1.1.21671. A game update can break it until the mod is updated.[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/12]BepInEx for Survival Log[/url]. Install it first.[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/61]Exiled's Toolkit[/url] 0.20.0 or newer. Fitness Bar does not load without it.[/*]
 [*]Optional: [url=https://www.nexusmods.com/survivallog/mods/73]Mod Manager[/url]. With it, you can change every setting in game on its Mods screen and see what each one does, without opening the config file.[/*]
@@ -44,7 +44,7 @@ With Vital Signs installed, Fitness Bar stays off: Vital Signs draws its own Fit
 Delete [font=Courier New]FitnessBar.dll[/font] from the [font=Courier New]BepInEx\plugins[/font] folder.
 
 [size=5]Configuration[/size]
-There's one setting, [font=Courier New]Enabled[/font], which turns the mod on or off. Change it in [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font] or on the Mod Manager's Mods screen. It takes effect at the next game start.
+There's one setting, [font=Courier New]Enabled[/font], which turns the mod on or off. Change it in [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font] or on the Mod Manager's Mods screen. It takes effect at once.
 
 [size=5]Feedback[/size]
 Found a bug or have an idea? Come say hi in the [url=https://discord.gg/pDrQtqbZgb]unofficial modding Discord for Survival Log[/url], or post in this page's Posts tab. For bugs, please include [font=Courier New]BepInEx\LogOutput.log[/font] and [font=Courier New]BepInEx\fitness-bar.log[/font].
@@ -70,13 +70,13 @@ Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会�
 
 [size=5]已知问题[/size]
 数值每隔几秒读取一次，所以变化可能要等这么久才会显示。
-安装了 Vital Signs 时，Fitness Bar 保持关闭：Vital Signs 会在同一位置显示它自己的健康条。
+Vital Signs 在同一位置显示它自己的健康条时，Fitness Bar 保持关闭。在 Vital Signs 里关掉那条，就会显示这一条。
 
 [url=https://www.nexusmods.com/survivallog/mods/73]获取 Mod Manager[/url]，在游戏里设置所有模组。[url=https://sldb.core-directive.com/zh/]打开 Survival Log 维基[/url]，物品、配方、地图一查就有。
 
 [size=5]前置要求[/size]
 [list]
-[*]Survival Log 1.1.20719。游戏更新后模组可能暂时失效，直到模组更新为止。[/*]
+[*]Survival Log 1.1.21671。游戏更新后模组可能暂时失效，直到模组更新为止。[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/12]BepInEx for Survival Log[/url]，请先安装。[/*]
 [*][url=https://www.nexusmods.com/survivallog/mods/61]Exiled's Toolkit[/url] 0.20.0 或更新版本。没有它，Fitness Bar 无法加载。[/*]
 [*]可选：[url=https://www.nexusmods.com/survivallog/mods/73]Mod Manager[/url]。装了它，可以在游戏里它的「模组」界面修改每项设置，并看到每项的说明，不用打开配置文件。[/*]
@@ -95,7 +95,7 @@ Fitness Bar 只读取并显示你的健康，从不改动游戏数据，不会�
 从 [font=Courier New]BepInEx\plugins[/font] 文件夹中删除 [font=Courier New]FitnessBar.dll[/font]。
 
 [size=5]配置[/size]
-只有一项设置 [font=Courier New]Enabled[/font]，用来开关本模组。可以在 [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font] 里修改，也可以在 Mod Manager 的「模组」界面修改，下次启动游戏时生效。
+只有一项设置 [font=Courier New]Enabled[/font]，用来开关本模组。可以在 [font=Courier New]BepInEx\config\com.dev.survivallog.fitnessbar.cfg[/font] 里修改，也可以在 Mod Manager 的「模组」界面修改，改动立即生效。
 
 [size=5]反馈[/size]
 发现 bug 或有好点子？欢迎来 [url=https://discord.gg/pDrQtqbZgb]Survival Log 非官方模组 Discord[/url] 打个招呼，或在本页的「Posts」标签里发帖。报告 bug 时，请附上 [font=Courier New]BepInEx\LogOutput.log[/font] 和 [font=Courier New]BepInEx\fitness-bar.log[/font]。
