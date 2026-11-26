@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7
+
+- Small speed up: on the main menu the mod no longer checks the page every two seconds.
+- Made for Survival Log 1.1.21671.
+
 ## 0.1.6
 
 - With Vital Signs installed, this bar now shows when you turn off Vital Signs' Fitness bar or Vital Signs itself. Before, Fitness Bar stayed off as soon as Vital Signs was installed, so you could end up with no Fitness bar at all.

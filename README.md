@@ -49,7 +49,7 @@ Settings live in `BepInEx\config\com.dev.survivallog.fitnessbar.cfg`, created th
 
 Built for Survival Log 1.1.21671 with BepInEx `6.0.0-be.788`.
 
-Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.6 started` and the line after it. With `Enabled` set to `false` it says `off: FitnessBar/Enabled is false`. While Vital Signs shows its Fitness bar it says `off: Vital Signs draws the Fitness bar`. Otherwise it says `drawing the Fitness bar`.
+Check `BepInEx\LogOutput.log` for `===== Fitness Bar 0.1.7 started` and the line after it. With `Enabled` set to `false` it says `off: FitnessBar/Enabled is false`. While Vital Signs shows its Fitness bar it says `off: Vital Signs draws the Fitness bar`. Otherwise it says `drawing the Fitness bar`.
 
 Once a game has loaded, look for `page script sent to CoreUI1 (install 1): the Fitness strip is under the Life bar`. A line ending `no Life bar on the HUD right now` means the mod could not find the Life bar to put the Fitness bar under.
 

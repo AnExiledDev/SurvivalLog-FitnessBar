@@ -234,6 +234,58 @@ public class PageWatchTests
         return watch;
     }
 
+    [Fact]
+    public void Off_a_save_one_empty_reading_goes_out_and_then_the_page_is_left_alone()
+    {
+        var watch = new PageWatch();
+        var sent = 0;
+        string? reply = null;
+
+        for (var now = 0.0; now <= 20; now += Frame)
+        {
+            var turn = watch.Step(now, reply);
+            reply = null;
+
+            if (turn.Send == PageSend.Nothing || !watch.Wants(false, now)) continue;
+
+            sent++;
+            reply = PageAnswer.NoPage;
+        }
+
+        Assert.Equal(1, sent);
+    }
+
+    [Fact]
+    public void A_player_showing_up_starts_the_checks_again()
+    {
+        var watch = new PageWatch();
+
+        watch.Step(0, null);
+        watch.Wants(false, 0);
+        watch.Step(Frame, PageAnswer.NoPage);
+        watch.Step(Frame + PageWatch.CheckSeconds, null);
+        Assert.False(watch.Wants(false, Frame + PageWatch.CheckSeconds));
+
+        var at = Frame + 2 * PageWatch.CheckSeconds;
+
+        Assert.Equal(PageSend.Check, watch.Step(at, null).Send);
+        Assert.True(watch.Wants(true, at));
+    }
+
+    [Fact]
+    public void A_wanted_install_waits_while_there_is_no_player()
+    {
+        var watch = new PageWatch();
+
+        watch.Step(0, null);
+        watch.Wants(false, 0);
+        watch.Step(Frame, PageAnswer.Missing);
+
+        Assert.Equal(PageSend.Install, watch.Step(2 * Frame, null).Send);
+        Assert.False(watch.Wants(false, 2 * Frame));
+        Assert.Equal(PageSend.Nothing, watch.Step(3 * Frame, null).Send);
+    }
+
     /// <summary>Steps frame by frame with a page that gives the same answer to every call on the frame after it; returns what was sent, and when.</summary>
     private static List<(double At, PageSend Send)> AnswerEverySend(PageWatch watch, double from, double to, string answer)
     {

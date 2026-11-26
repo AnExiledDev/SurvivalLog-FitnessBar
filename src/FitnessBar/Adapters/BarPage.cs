@@ -56,6 +56,9 @@ internal sealed class BarPage
         if (turn.Send == PageSend.Nothing) return;
 
         var fitness = PlayerFitness.Read();
+
+        if (!_watch.Wants(fitness != null, now)) return;
+
         var isChinese = GameLanguage.IsChinese();
         var javaScript = turn.Send == PageSend.Install ? PageCalls.Install(Script(), fitness, isChinese) : PageCalls.Check(fitness, isChinese);
 

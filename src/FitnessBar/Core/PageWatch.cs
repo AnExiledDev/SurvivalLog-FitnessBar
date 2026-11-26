@@ -36,6 +36,7 @@ public sealed class PageWatch
     private double _nextCheckAt;
     private double _nextInstallAt;
     private bool _isInstallWanted;
+    private bool _isEmptySent;
     private int _installs;
 
     /// <summary>One step per frame. <paramref name="reply"/> is what the page answered since the last step, or null.</summary>
@@ -53,6 +54,27 @@ public sealed class PageWatch
         if (now >= _nextCheckAt) return Send(PageSend.Check, now);
 
         return new PageTurn(PageSend.Nothing, null);
+    }
+
+    /// <summary>
+    /// Asked before each send the last step chose. With no player (the main menu, a loading screen) one empty reading
+    /// goes out to take the strip away, and after that nothing is sent until a player shows up again. Returns false when
+    /// the send is dropped; the next one is due a check period later.
+    /// </summary>
+    public bool Wants(bool hasPlayer, double now)
+    {
+        if (hasPlayer || !_isEmptySent)
+        {
+            _isEmptySent = !hasPlayer;
+
+            return true;
+        }
+
+        _awaiting = PageSend.Nothing;
+        _nextCheckAt = now + CheckSeconds;
+        _nextInstallAt = Math.Max(_nextInstallAt, now + CheckSeconds);
+
+        return false;
     }
 
     /// <summary>The call from the last step never left: the game's web view is not up yet.</summary>

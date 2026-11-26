@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using ExiledToolkit.Kit;
 using UnityEngine;
 
 namespace FitnessBar.Adapters;
@@ -24,7 +25,7 @@ public sealed class BarTicker : MonoBehaviour
 
         try
         {
-            Page.Tick(Time.unscaledTime);
+            Page.Tick(Clock.Now);
         }
         catch (Exception ex)
         {
